@@ -1,0 +1,114 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.score{
+	margin-left:48%;
+	font-size:1.4em;
+}
+
+.container{ /*容器宽度占满body，高度由子元素决定*/
+	display:flex;
+	justify-content:center;
+	align-items:center; /*项目在主轴交叉轴居中，效果显示为水平居中*/
+	/*background:red;*/ /*test*/
+}
+
+.grid-plane{
+	/*display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	align-content:space-around;*/ /*缺点是项目间距比项目与父容器边框间距大一倍*/
+	position:relative;
+	width:500px;
+	height:500px; 
+	/*padding:5px;*/
+	border-radius:10px;
+	background:#ccc;
+}
+
+/*
+.grid-row{
+	display:flex;
+	justify-content:space-around;
+	align-items:space-around;
+	height:120px;
+	background:blue;
+}
+*/
+
+.grid-cell{
+	/*display:flex;
+	justify-content:center;
+	align-items:center;*/
+	float:left;
+	width:25%;
+	height:25%;
+	border:5px solid #ccc; /*宽度与父容器padding相同，颜色与父容器background相同*/
+	box-sizing:border-box; /*防止子元素撑破父元素*/
+	/*font-size:2em;*/
+	/*text-align:center;*/
+	/*color:#777; */
+	background:#eee; /*无数字方块的背景色*/
+}
+
+.number_plane{
+	position:absolute;
+	box-sizing:border-box;
+	width:25%;
+	height:25%;
+	padding:5px;
+	left:0;
+	top:0;
+	transition:all 0.2s;
+	font-size:2em;
+	color:#eee;
+}
+
+.number{
+	position:relative;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+.number span{
+	position:absolute;
+	top:48%;
+	left:0;
+	right:0;
+	margin-top:-0.5em;
+	color:#777;
+}
+
+/*位置,首位列，二位行*/
+.p00{left:0; top:0;}
+.p01{left:0; top:25%;}
+.p02{left:0; top:50%;}
+.p03{left:0; top:75%;}
+.p10{left:25%; top:0;}
+.p11{left:25%; top:25%;}
+.p12{left:25%; top:50%;}
+.p13{left:25%; top:75%;}
+.p20{left:50%; top:0;}
+.p21{left:50%; top:25%;}
+.p22{left:50%; top:50%;}
+.p23{left:50%; top:75%;}
+.p30{left:75%; top:0;}
+.p31{left:75%; top:25%;}
+.p32{left:75%; top:50%;}
+.p33{left:75%; top:75%;}
+
+/*颜色*/
+.n2{background:#eee4da;}
+.n4{background:#ece0c8;}
+.n8{background:#f3b179;}
+.n16{background:#f59563;}
+.n32{background:#f67c5f;}
+.n64{background:#f65e3c;}
+.n128{background:#edce71;}
+.n256{background:#eccb61;}
+.n512{background:#edc750;}
+.n1024{background:#edc631;}
+.n2048{background:#edc12f;}
